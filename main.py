@@ -35,7 +35,7 @@ if uploaded_file:
 
         # Model Naive Bayes dengan AdaBoost
         base_model = GaussianNB()
-        model = AdaBoostClassifier(base_estimator=base_model, n_estimators=50)
+        model = AdaBoostClassifier(estimator=base_model, n_estimators=50)
         model.fit(X_train, y_train)
 
         # Prediksi
